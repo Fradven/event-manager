@@ -1,3 +1,7 @@
+import Didlydoo from "./client/Didlydoo.jsx";
+
 export function App() {
-    return <h1>Hello world!</h1>;
+    return (
+      <div><Didlydoo /></div>
+    );
   }
