@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import Events from './template/Events'
 import AddEvent from './template/AddEvent'
+import { Button } from '@mui/material'
 
 export default function Didlydoo() {
     const [running, setRunning] = useState(false)
@@ -16,7 +17,7 @@ export default function Didlydoo() {
             <div className="header">
                 <h1 className='header__title' >Event Manager</h1> 
                 <div className="header_btnctn">
-                <button className='header__btn' onClick={runStatus}>{!running ? "Add New Event" : "cancel" } </button>
+                <Button className='header__btn' onClick={runStatus}>{!running ? "Add New Event" : "cancel" } </Button>
                 </div>
             </div>
         {/* main body */}
