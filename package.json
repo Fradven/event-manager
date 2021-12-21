@@ -25,6 +25,7 @@
   },
   "devDependencies": {
     "@parcel/transformer-sass": "^2.0.1",
+    "axios": "^0.24.0",
     "parcel": "^2.0.1"
   }
 }
