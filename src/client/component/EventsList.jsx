@@ -1,18 +1,29 @@
-import { decomposeColor } from '@mui/material'
 import React from 'react'
+import { DataGrid } from '@mui/x-data-grid';
 
-export default function EventsList({data}) {
-    
+export default function EventsList({name, author, description, dates}) {
+        const columns = [
+            { field: 'name', headerName: 'Name', width: 120 },
+        ]
+        dates.map(date =>(
+         columns.push ({ field: `${date.date}`, headerName: `${date.date}`, width: 100 })
+         
+        )) 
+        
+        const rows = [
+            
+        ]
     return (
         <>
         <div className="event__ctn">
-            <ul className="event__list">
-                <li className='event__name'>{data.name}</li>
-                <li className='event__author'>{data.author}</li>
-                <li className='event__description'>{data.description}</li>
-                <li className='event__dates'></li>
-                <li className='event__attendees'></li>
-            </ul>
+                <h3 className='event__name'>{name}</h3>
+                <p className='event__author'>{author}</p>
+                <p className='event__description'>{description}</p>
+                <DataGrid
+                  columns={columns}
+                  pageSize={5}
+                  rowsPerPageOptions={[5]}
+                />
         </div>
         </>
     )

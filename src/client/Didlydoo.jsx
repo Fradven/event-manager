@@ -8,7 +8,6 @@ export default function Didlydoo() {
 
     function runStatus() {
         setRunning(!running)
-        console.log(running)
       }
     
     return (
